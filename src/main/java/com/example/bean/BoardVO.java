@@ -4,12 +4,31 @@ import java.util.Date;
 
 public class BoardVO {
 	private int seq;
+	private String category;
 	private String title;
 	private String writer;
 	private String content;
 	private Date regdate;
 	private int cnt;
-	
+	private Date cordate;
+	private String attach;
+
+	public String getAttach() {
+		return attach;
+	}
+
+	public void setAttach(String attach) {
+		this.attach = attach;
+	}
+
+	public Date getCordate() {
+		return cordate;
+	}
+
+	public void setCordate(Date cordate) {
+		this.cordate = cordate;
+	}
+
 	public int getSeq() {
 		return seq;
 	}
@@ -46,4 +65,6 @@ public class BoardVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
+	public String getCategory() { return category; }
+	public void setCategory(String category) { this.category = category; }
 }

@@ -45,20 +45,26 @@
 <table id="list" width="90%">
 <tr>
 	<th>Id</th>
+	<th>Category</th>
 	<th>Title</th>
 	<th>Writer</th>
 	<th>Content</th>
 	<th>Regdate</th>
+	<th>Correction Date</th>
+	<th>Attach</th>
 	<th>Edit</th>
 	<th>Delete</th>
 </tr>
 <c:forEach items="${list}" var="u">
 	<tr>
 		<td>${u.getSeq()}</td>
+		<td>${u.getCategory()}</td>
 		<td>${u.getTitle()}</td>
 		<td>${u.getWriter()}</td>
 		<td>${u.getContent()}</td>
 		<td>${u.getRegdate()}</td>
+		<td>${u.getCordate()}</td>
+		<td><a href="fileform.jsp">Attachment</a></td>
 		<td><a href="editform.jsp?id=${u.getSeq()}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
 	</tr>
